@@ -15,9 +15,9 @@
 
 ## GitHub Pages
 
-현재 **Deploy from a branch**, `main`, `/ (root)`로 게시 중입니다. 공개 주소는 https://donggil113.github.io/kmchurch-site/ 입니다.
+현재 **Deploy from a branch**, `main`, `/ (root)`로 게시 중이며 `junim-whitestone.com`을 사용자 도메인으로 등록했습니다.
 
-구매한 `junim-whitestone.com`은 Cloudflare에서 DNS를 관리합니다. Cloudflare 계정에 로그인한 뒤 GitHub 저장소 **Settings → Pages → Custom domain**에 `junim-whitestone.com`을 저장하고, Cloudflare **DNS → Records**에 루트(`@`) A 레코드 `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`과 `www` CNAME `donggil113.github.io`를 추가하세요. 처음에는 각 레코드를 **DNS only**로 두고, GitHub DNS 검사와 HTTPS 인증서 발급 후 **Enforce HTTPS**를 확인하세요. DNS 연결 전에는 GitHub 주소가 새 도메인으로 이동해 접속에 실패할 수 있으므로 두 설정을 연달아 완료해야 합니다.
+DNS는 Cloudflare에서 관리합니다. 루트(`@`)에 GitHub Pages의 A 레코드 4개와 AAAA 레코드 4개, `www`에 `donggil113.github.io`를 가리키는 CNAME을 **DNS only**로 설정했습니다. GitHub 계정의 도메인 소유 확인도 마쳤습니다. 도메인이나 DNS를 변경할 때는 [GitHub Pages 도메인 안내](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)를 참고하세요. HTTPS 인증서 발급과 강제 적용 상태는 저장소 **Settings → Pages**에서 확인할 수 있습니다.
 
 GitHub Pages는 서버 프로그램과 데이터베이스를 실행하지 않습니다. 회원·게시판·관리자 기능까지 운영하려면 별도 백엔드가 필요합니다.
 
