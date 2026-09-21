@@ -1,0 +1,15 @@
+reference-*.html
+backup/
+backups/
+*.sql
+*.sql.gz
+*.dump
+*.bak
+.env
+.env.*
+__pycache__/
+*.zip
+*.7z
+*.tar.gz
+*.sqlite
+*.db
