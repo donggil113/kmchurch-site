@@ -15,9 +15,9 @@
 
 ## GitHub Pages
 
-현재 **Deploy from a branch**, `main`, `/ (root)`로 게시 중이며 `junim-whitestone.com`을 사용자 도메인으로 등록했습니다.
+현재 **Deploy from a branch**, `main`, `/ (root)`로 게시 중입니다. 공식 주소는 **https://junim-whitestone.com/**이며 HTTPS 강제 적용과 `www` 주소의 자동 이동을 설정했습니다.
 
-DNS는 Cloudflare에서 관리합니다. 루트(`@`)에 GitHub Pages의 A 레코드 4개와 AAAA 레코드 4개, `www`에 `donggil113.github.io`를 가리키는 CNAME을 **DNS only**로 설정했습니다. GitHub 계정의 도메인 소유 확인도 마쳤습니다. 도메인이나 DNS를 변경할 때는 [GitHub Pages 도메인 안내](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)를 참고하세요. HTTPS 인증서 발급과 강제 적용 상태는 저장소 **Settings → Pages**에서 확인할 수 있습니다.
+DNS는 Cloudflare에서 관리합니다. 루트(`@`)에 GitHub Pages의 A 레코드 4개와 AAAA 레코드 4개, `www`에 `donggil113.github.io`를 가리키는 CNAME을 **DNS only**로 설정했습니다. GitHub 계정의 도메인 소유 확인도 마쳤습니다. 도메인이나 DNS를 변경할 때는 [GitHub Pages 도메인 안내](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)를 참고하세요.
 
 GitHub Pages는 서버 프로그램과 데이터베이스를 실행하지 않습니다. 회원·게시판·관리자 기능까지 운영하려면 별도 백엔드가 필요합니다.
 
