@@ -82,7 +82,7 @@ def local_link(value: str) -> str:
                 return f"{target}.html"
         except (ValueError, IndexError):
             pass
-    return value
+    return urljoin(BASE, value)
 
 
 def clean_fragment(fragment: BeautifulSoup, retain_positioned: bool) -> str:
@@ -129,6 +129,11 @@ def content_for(code: int, source: str) -> tuple[str, str]:
     content = soup.select_one("#awdDisplayContent")
     if not content:
         return "empty", "<p>공개 본문을 확인하지 못했습니다.</p>"
+    if code in {4, 5, 6}:
+        photos = list(dict.fromkeys(re.findall(r"/user/saveDir/people/[^)\'\" ]+", str(content))))
+        label = {4: "교역자", 5: "장로", 6: "직원"}[code]
+        cards = ''.join(f'<figure><img src="{html.escape(download_asset(photo), quote=True)}" alt="{label} 사진"></figure>' for photo in photos)
+        return "people", cards or "<p>등록된 사진이 없습니다.</p>"
     if code in BOARD_CODES or code in VIDEO_CODES:
         entries = {}
         for link in content.select('a[href*="Mode=view"]'):
